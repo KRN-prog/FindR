@@ -4,14 +4,6 @@ FindR est une application de rencontre qui vous permettra d'aimez ou non le prof
 # FindR - EN
 FindR is a dating application that while allow to like or not the profil of a user in one swipe, right to like and left to pass.
 
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
 ### `npm start`
 
 Faite `npm start` dans votre terminal dans le fichier [FINDR] pour lancer l'application Front-End [Lancer FINDR dans votre navigateur](http://localhost:3000).
