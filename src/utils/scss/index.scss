@@ -102,17 +102,29 @@ body{
 .displayLikeDislike{
     display: block;
 }
-.likeBending{
+.like{
     transform-origin: bottom right 60px;
-    //transform: rotate(5deg);
-    transform: translateX(10%);
+    transform: rotate(100deg);
+    opacity: 0;
     transition: all 1s ease;
+    &--bending{
+        transform-origin: bottom right 60px;
+        transform: rotate(5deg);
+        //transform: translateX(10%);
+        transition: all 1s ease;
+    }
 }
-.dislikeBending{
+.dislike{
     transform-origin: bottom left 60px;
-    //transform: rotate(-5deg);
-    transform: translateX(-10%);
+    transform: rotate(-100deg);
+    opacity: 0;
     transition: all 1s ease;
+    &--bending{
+        transform-origin: bottom left 60px;
+        transform: rotate(-5deg);
+        //transform: translateX(-10%);
+        transition: all 1s ease;
+    }
 }
 .UnBending{
     transform: rotate(0deg);
@@ -207,4 +219,8 @@ body{
         transform: rotate(0deg);
         transform-origin: bottom right 60px;
     }
+}
+
+.ldfldfk{
+    padding: 50px;
 }

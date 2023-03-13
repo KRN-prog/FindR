@@ -1,13 +1,24 @@
 function Card({image, likeHoverState, likeState, dislikeHoverState, dislikeState}) {
-    console.log(likeHoverState)
+    console.log("========== CONSOLE LOG ==========")
     console.log(likeState)
-    console.log(dislikeHoverState)
     console.log(dislikeState)
+    console.log("========== CONSOLE LOG ==========")
     
     return(
         <div className="card card--apparition">
-            <img src={image} alt={image} className={ likeHoverState === true ? "userImage likeBending" : dislikeHoverState === true ? "userImage dislikeBending" : "userImage UnBending" }/>
-            <div  className={ likeHoverState === true ? "userInfo likeBending" : dislikeHoverState === true ? "userInfo dislikeBending" : "userInfo UnBending" }>
+            <img src={image} alt={image} className={
+            likeHoverState === true && likeState === false && dislikeState === false ? "userImage like--bending"
+            : dislikeHoverState === true && likeState === false && dislikeState === false ? "userImage dislike--bending"
+            : likeState === true ? "userImage like"
+            : dislikeState === true ? "userImage dislike"
+            : "userImage UnBending" }/>
+
+            <div  className={
+            likeHoverState === true && likeState === false && dislikeState === false ? "userInfo like--bending"
+            : dislikeHoverState === true && likeState === false && dislikeState === false ? "userInfo dislike--bending"
+            : likeState === true ? "userInfo like"
+            : dislikeState === true ? "userInfo dislike"
+            : "userInfo UnBending" }>
                 <div className="userInfo__likeDislike">
                     <span className={likeHoverState === true ? 'userInfo__likeDislike__like displayLikeDislike' : 'userInfo__likeDislike__like'}>Like</span>
                     <span className={dislikeHoverState === true ? 'userInfo__likeDislike__dislike displayLikeDislike' : 'userInfo__likeDislike__dislike'}>Nope</span>
