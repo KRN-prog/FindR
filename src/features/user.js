@@ -27,9 +27,18 @@ export async function fetchOrUpdateUser(store, userToken) {
   store.dispatch(userFetching())
   if (userToken !== undefined) {
     try{
-      const response = await fetch('http://127.0.0.1/www/FidnerAPI/user/1')
+      const response = await fetch('http://127.0.0.1/www/FidnerAPI/user/11', {
+        method: 'post',
+        headers: new Headers({
+          'Content-Type': 'application/x-www-form-urlencoded'
+        }),
+        body: new URLSearchParams({
+          'email': userToken.username,
+          'password': userToken.password,
+        })
+      })
       const data = await response.json()
-      console.log(data)
+      console.log(data.status)
       if(data.status === 200){
         store.dispatch(userResolved(data))
       }else{
